@@ -25,16 +25,28 @@ func getEnv(key, fallback string) string {
 // messages, data, or HTML is written to the response.
 // For more: https://golang.org/doc/articles/wiki/#tmp_3
 func indexHandler(w http.ResponseWriter, r *http.Request) {
+
+	
 	// Write this clever message to w, which implements
 	// the Writer interface https://golang.org/pkg/io/#Writer
-	fmt.Fprintf(w, "Hellow MGT656/660 FTW!@$#")
+	fmt.Fprintf(w, "splendid-magpie")
+}
+
+func nickHandler(w http.ResponseWriter, r *http.Request) {
+
+	
+	// Write this clever message to w, which implements
+	// the Writer interface https://golang.org/pkg/io/#Writer
+	fmt.Fprintf(w, "splendid-magpie")
 }
 
 func main() {
 	// Say that when we receive a request for the '/' (or "root") URL
 	// we want the function `indexHandler` to handle it.
 	http.HandleFunc("/", indexHandler)
+	http.HandleFunc("/nickname", nickHandler)
 
 	// Start listening for HTTP requests.
 	http.ListenAndServe(":"+getEnv("PORT", "8080"), nil)
 }
+
