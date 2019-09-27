@@ -38,6 +38,15 @@ func nickHandler(w http.ResponseWriter, r *http.Request) {
 	// Write this clever message to w, which implements
 	// the Writer interface https://golang.org/pkg/io/#Writer
 	fmt.Fprintf(w, "splendid-magpie")
+
+}
+
+func nickHandler(w http.ResponseWriter, r *http.Request) {
+
+	
+	// Write this clever message to w, which implements
+	// the Writer interface https://golang.org/pkg/io/#Writer
+	fmt.Fprintf(w, "splendid-magpie")
 }
 
 func main() {
@@ -49,3 +58,4 @@ func main() {
 	// Start listening for HTTP requests.
 	http.ListenAndServe(":"+getEnv("PORT", "8080"), nil)
 }
+
