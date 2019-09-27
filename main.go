@@ -41,13 +41,6 @@ func nickHandler(w http.ResponseWriter, r *http.Request) {
 
 }
 
-func nickHandler(w http.ResponseWriter, r *http.Request) {
-
-	
-	// Write this clever message to w, which implements
-	// the Writer interface https://golang.org/pkg/io/#Writer
-	fmt.Fprintf(w, "splendid-magpie")
-}
 
 func main() {
 	// Say that when we receive a request for the '/' (or "root") URL
