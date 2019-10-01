@@ -1,3 +1,3 @@
-module mod.go
+module rachit
 
 go 1.13
